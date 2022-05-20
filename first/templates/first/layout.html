@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicharito</title>
+</head>
+<body>
+    <p> Check this out ! This should be on Every page. The register page, the login page, and the index page. This is because 
+        the layout's goal is to have the same thing on every page. Think about other websites they have a navabar everywhere. That would
+    be a good example. Below is the div which is what changes depending on the html page ! Check out the different html Pages </p>
+
+    <a href="{% url 'index' %}">Index</a>
+    <a href="{% url 'login' %}">Login</a>
+    <a href="{% url 'register' %}">Register</a>
+
+    <div class="body">
+            {% block body %}
+
+            {% endblock %}
+        </div>
+
+
+</body>
+</html>
